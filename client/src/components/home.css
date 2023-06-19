@@ -1,0 +1,52 @@
+.home-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  .title {
+    font-size: 24px;
+    color: blue;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .cartas {
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(6, 128, 168);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .home-container {
+    background: linear-gradient(to bottom right, #ff0000, #00ff00); /* Cambia los colores según tus preferencias */
+    position: relative; 
+    overflow: hidden; 
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; 
+  }
+  .create-button {
+    background-color: rgb(29, 29, 151); /* Cambia el color según tus preferencias */
+    color: white; /* Cambia el color del texto según tus preferencias */
+    border-radius: 5px; /* Agrega bordes redondeados ajustando el valor según tus preferencias */
+    padding: 10px 20px; /* Ajusta el relleno según tus preferencias */
+    border: none; /* Elimina el borde */
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .reload-button {
+    background-color: rgb(29, 29, 151); /* Cambia el color según tus preferencias */
+    color: white; /* Cambia el color del texto según tus preferencias */
+    border-radius: 5px; /* Agrega bordes redondeados ajustando el valor según tus preferencias */
+    padding: 10px 20px; /* Ajusta el relleno según tus preferencias */
+    border: none; /* Elimina el borde */
+    cursor: pointer;
+    margin-right: 10px;
+  }
