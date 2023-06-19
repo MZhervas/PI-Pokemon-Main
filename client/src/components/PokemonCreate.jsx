@@ -2,6 +2,7 @@ import React,{useState,useEffect} from "react";
 import { Link,useHistory } from "react-router-dom";
 import {postPokemons,getTypes} from '../actions/index';
 import { useDispatch,useSelector } from "react-redux";
+import './pokemonCreate.css'
 
 export default function PokemonCreate(){
     const dispatch = useDispatch()
@@ -91,7 +92,7 @@ export default function PokemonCreate(){
         }
     
         if (input.weight.trim() === "") {
-          errors.weight = "Debe ingresar un peso.";
+          errors.weight = "Debe ingresar un peso mayor a 0";
           isValid = false;
         }
     
@@ -121,7 +122,7 @@ export default function PokemonCreate(){
             <h1>¡Crea tu Pokemon!</h1>
             <form onSubmit={(event)=> handlerSubmit(event)}>
                 <div>
-                    <label>Nombre</label>
+                    <label>Nombre </label>
                     <input type="text"
                     value={input.name} 
                     name="name"
@@ -129,7 +130,7 @@ export default function PokemonCreate(){
                     {errors.name && <span>{errors.name}</span>} {/* Mostrar mensaje de error */}
                 </div>
                 <div>
-                    <label>Vida</label>
+                    <label>Vida </label>
                     <input type="number"
                     value={input.health}
                     name="health" 
@@ -137,7 +138,7 @@ export default function PokemonCreate(){
                     {errors.health && <span>{errors.health}</span>} {/* Mostrar mensaje de error */}
                 </div>
                 <div>
-                    <label>Ataque</label>
+                    <label>Ataque </label>
                     <input type="number"
                     value={input.attack} 
                     name="attack"
@@ -145,7 +146,7 @@ export default function PokemonCreate(){
                      {errors.attack && <span>{errors.attack}</span>} {/* Mostrar mensaje de error */}
                 </div>
                 <div>
-                    <label>Defensa</label>
+                    <label>Defensa </label>
                     <input type="number"
                     value={input.defense}
                     name="defense" 
@@ -153,7 +154,7 @@ export default function PokemonCreate(){
                      {errors.defense && <span>{errors.defense}</span>} {/* Mostrar mensaje de error */}
                 </div>
                 <div>
-                    <label>Velocidad</label>
+                    <label>Velocidad </label>
                     <input type="number"
                     value={input.speed}
                     name="speed"
@@ -161,7 +162,7 @@ export default function PokemonCreate(){
                      {errors.speed && <span>{errors.speed}</span>} {/* Mostrar mensaje de error */}
                 </div>
                 <div>
-                    <label>Altura</label>
+                    <label>Altura </label>
                     <input type="number"
                     value={input.height}
                     name="height"
@@ -169,7 +170,7 @@ export default function PokemonCreate(){
                      {errors.height && <span>{errors.height}</span>} {/* Mostrar mensaje de error */}
                 </div>
                 <div>
-                    <label>Peso</label>
+                    <label>Peso </label>
                     <input type="number"
                     value={input.weight}
                     name="weight"
@@ -177,7 +178,7 @@ export default function PokemonCreate(){
                     {errors.weight && <span>{errors.weight}</span>} {/* Mostrar mensaje de error */}
                 </div>
                 <div>
-                    <label>Imagen</label>
+                    <label>Imagen </label>
                     <input type="text"
                     value={input.image}
                     name="image" 
