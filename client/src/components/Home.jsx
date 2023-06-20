@@ -53,17 +53,23 @@ function handleFilterCreated(event){
     dispatch(filterCreated(event.target.value))
 }
 
+function handleFilteredType(event){
+    dispatch(filterPokemonsByType(event.target.value))
+}
+
 return(
     <div className='home-container'>
         <h1>Mi pokemon PI</h1>
         <Link  to='/pokemons'><button className='create-button'>Crear personaje</button></Link>
         <button onClick={event=>{handleClick(event)}} className='reload-button'> Volver a cargar los personajes</button>
         <div>
+
             <select className='order' onChange={event => handleSort(event)}>
                 <option value='asc'>Ascendente</option>
                 <option value='desc'>Descendente</option>
             </select>
-            <select  defaultValue='All' onChange={event => handleFilterType(event)}>
+
+            <select  defaultValue='All'  onChange={event => handleFilterType(event)}>
                 <option value='All'>Todos</option>
                 <option value='normal'>normal</option>
                 <option value='fighting'>fighting</option>
@@ -86,12 +92,15 @@ return(
                 <option value='unknown'>unknown</option>
                 <option value='shadow'>shadow</option>
             </select>
+
             <select onChange={event => handleFilterCreated(event)}>
                 <option value="All">Todos</option>
                 <option value="Created">Creados</option>
                 <option value="Api">Existentes</option>
             </select>
+            
             <SearchBar/>
+
             <Paged
             pokemongPerPage={pokemonsPerPage}
             allPokemons={allPokemons.length}

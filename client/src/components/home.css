@@ -24,7 +24,7 @@
   }
   
   .home-container {
-    background: linear-gradient(to bottom right, #ff0000, #ffe600); /* Cambia los colores según tus preferencias */
+    background: linear-gradient(to bottom right, #ff0000, #ffe600); 
     position: relative; 
     overflow: hidden; 
     margin: 0;
@@ -32,21 +32,21 @@
     box-sizing: border-box; 
   }
   .create-button {
-    background-color: rgb(29, 29, 151); /* Cambia el color según tus preferencias */
-    color: white; /* Cambia el color del texto según tus preferencias */
-    border-radius: 5px; /* Agrega bordes redondeados ajustando el valor según tus preferencias */
-    padding: 10px 20px; /* Ajusta el relleno según tus preferencias */
-    border: none; /* Elimina el borde */
+    background-color: rgb(29, 29, 151); 
+    color: white; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    border: none; 
     cursor: pointer;
     margin-right: 10px;
   }
   
   .reload-button {
-    background-color: rgb(29, 29, 151); /* Cambia el color según tus preferencias */
-    color: white; /* Cambia el color del texto según tus preferencias */
-    border-radius: 5px; /* Agrega bordes redondeados ajustando el valor según tus preferencias */
-    padding: 10px 20px; /* Ajusta el relleno según tus preferencias */
-    border: none; /* Elimina el borde */
+    background-color: rgb(29, 29, 151); 
+    color: white; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    border: none; 
     cursor: pointer;
     margin-right: 10px;
   }

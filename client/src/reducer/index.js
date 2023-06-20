@@ -61,9 +61,10 @@ function rootReducer (state = inicialState, action){
                 }
                 
                 case 'GET_NAME_POKEMONS':
-                    return{
-                        ...state,
-                        pokemons:action.payload
+                    const newPokemons = Array.isArray(action.payload) ? action.payload : [action.payload];
+                    return {
+                      ...state,
+                      pokemons: [...state.pokemons, ...newPokemons]
                     }
                 case 'FILTER_CREATED':
 
@@ -78,8 +79,6 @@ function rootReducer (state = inicialState, action){
                             ...state,
                             detail:action.payload
                         }
-                    
-                        
             default:
                 return state;
     }

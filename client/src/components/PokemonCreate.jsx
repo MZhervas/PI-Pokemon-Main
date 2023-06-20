@@ -92,7 +92,7 @@ export default function PokemonCreate(){
         }
     
         if (input.weight.trim() === "") {
-          errors.weight = "Debe ingresar un peso mayor a 0";
+          errors.weight = "Debe ingresar un peso ";
           isValid = false;
         }
     
@@ -127,7 +127,7 @@ export default function PokemonCreate(){
                     value={input.name} 
                     name="name"
                     onChange={handleChange}/>
-                    {errors.name && <span>{errors.name}</span>} {/* Mostrar mensaje de error */}
+                    {errors.name && <span>{errors.name}</span>} 
                 </div>
                 <div>
                     <label>Vida </label>
@@ -135,7 +135,7 @@ export default function PokemonCreate(){
                     value={input.health}
                     name="health" 
                     onChange={handleChange}/>
-                    {errors.health && <span>{errors.health}</span>} {/* Mostrar mensaje de error */}
+                    {errors.health && <span>{errors.health}</span>} 
                 </div>
                 <div>
                     <label>Ataque </label>
@@ -143,7 +143,7 @@ export default function PokemonCreate(){
                     value={input.attack} 
                     name="attack"
                     onChange={handleChange}/>
-                     {errors.attack && <span>{errors.attack}</span>} {/* Mostrar mensaje de error */}
+                     {errors.attack && <span>{errors.attack}</span>}
                 </div>
                 <div>
                     <label>Defensa </label>
@@ -151,7 +151,7 @@ export default function PokemonCreate(){
                     value={input.defense}
                     name="defense" 
                     onChange={handleChange}/>
-                     {errors.defense && <span>{errors.defense}</span>} {/* Mostrar mensaje de error */}
+                     {errors.defense && <span>{errors.defense}</span>} 
                 </div>
                 <div>
                     <label>Velocidad </label>
@@ -159,7 +159,7 @@ export default function PokemonCreate(){
                     value={input.speed}
                     name="speed"
                     onChange={handleChange} />
-                     {errors.speed && <span>{errors.speed}</span>} {/* Mostrar mensaje de error */}
+                     {errors.speed && <span>{errors.speed}</span>} 
                 </div>
                 <div>
                     <label>Altura </label>
@@ -167,7 +167,7 @@ export default function PokemonCreate(){
                     value={input.height}
                     name="height"
                     onChange={handleChange} />
-                     {errors.height && <span>{errors.height}</span>} {/* Mostrar mensaje de error */}
+                     {errors.height && <span>{errors.height}</span>} 
                 </div>
                 <div>
                     <label>Peso </label>
@@ -175,7 +175,7 @@ export default function PokemonCreate(){
                     value={input.weight}
                     name="weight"
                     onChange={handleChange} />
-                    {errors.weight && <span>{errors.weight}</span>} {/* Mostrar mensaje de error */}
+                    {errors.weight && <span>{errors.weight}</span>} 
                 </div>
                 <div>
                     <label>Imagen </label>
@@ -183,7 +183,7 @@ export default function PokemonCreate(){
                     value={input.image}
                     name="image" 
                     onChange={handleChange}/>
-                    {errors.image && <span>{errors.image}</span>} {/* Mostrar mensaje de error */}
+                    {errors.image && <span>{errors.image}</span>} 
                 </div>
                 <select onChange={(event) => handleSelect(event)}>
                     {types.map((type)=>(

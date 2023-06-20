@@ -29,19 +29,19 @@ export function orderByname(payload){
     }
 }
 
-export function  getNamePokemons(name){
+ export function getNamePokemons(name){
     return async function(dispatch){
         try{
-            let json = await axios("https://pokeapi.co/api/v2/pokemon?name="+ name);
+            let json = await axios.get("https://pokeapi.co/api/v2/pokemon/?name="+ name);
             return dispatch({
                 type:'GET_NAME_POKEMONS',
                 payload:json.data
             })
         }catch(error){
-            /* console.log(error) */;
-        }
-    } 
-}
+             console.log(error); 
+        } 
+ } 
+ }
 
 export function getTypes(){
     return async function (dispatch){
