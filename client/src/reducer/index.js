@@ -3,7 +3,8 @@ const inicialState = {
     pokemons: [],
     allPokemons:[],
     types:[],
-    detail:[]
+    detail:[],
+    orderByAttack: '',
 }
 
 function rootReducer (state = inicialState, action){
@@ -77,7 +78,7 @@ function rootReducer (state = inicialState, action){
                             ...state,
                             detail:action.payload
                         }
-                        
+                    
                         
             default:
                 return state;

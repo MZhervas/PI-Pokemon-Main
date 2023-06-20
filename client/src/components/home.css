@@ -24,7 +24,7 @@
   }
   
   .home-container {
-    background: linear-gradient(to bottom right, #ff0000, #00ff00); /* Cambia los colores según tus preferencias */
+    background: linear-gradient(to bottom right, #ff0000, #ffe600); /* Cambia los colores según tus preferencias */
     position: relative; 
     overflow: hidden; 
     margin: 0;

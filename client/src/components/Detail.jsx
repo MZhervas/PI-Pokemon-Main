@@ -18,8 +18,8 @@ export default function Detail(props){
             {
                 myPokemon.length>0?
                 <div>
-                    <h2>{myPokemon[0].id}</h2>
-                    <h1>{myPokemon[0].name}</h1>
+                    <h2>Id: {myPokemon[0].id}</h2>
+                    <h1>Name: {myPokemon[0].name}</h1>
                     <img src={ myPokemon[0].img} />
                     <h3>type:{!myPokemon[0].createdInDb? myPokemon[0].type + ' ':myPokemon[0].types.map(element => element.name + (' '))}</h3>
                     <p>Vida: {myPokemon[0].health}</p>

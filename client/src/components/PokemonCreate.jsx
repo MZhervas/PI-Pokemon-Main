@@ -117,7 +117,7 @@ export default function PokemonCreate(){
     }
 
     return(
-        <div>
+        <div className="container">
             <Link to='/home'><button>Volver</button></Link>
             <h1>¡Crea tu Pokemon!</h1>
             <form onSubmit={(event)=> handlerSubmit(event)}>

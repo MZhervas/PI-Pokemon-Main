@@ -73,7 +73,7 @@ export function filterCreated(payload){
 export function getDetail(id){
     return async function(dispatch){
         try{
-            let json = await axios("http://localhost:3001/pokemons/:idPokemon")
+            let json = await axios(`http://localhost:3001/pokemons/${id}`)
             return dispatch({
                 type:'GET_DETAILS',
                 payload:json.data
