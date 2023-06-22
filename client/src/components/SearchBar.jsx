@@ -5,7 +5,7 @@ import { getNamePokemons } from "../actions";
 
 export default function SearchBar(){
     const dispatch = useDispatch()
-    const [name,setNme] = useState("")
+    const [name,setNme] = useState('')
 
 function handleInputChange(event){
     event.preventDefault()

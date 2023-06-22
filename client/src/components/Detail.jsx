@@ -9,7 +9,7 @@ export default function Detail(props){
     const dispatch=useDispatch()
 
     useEffect(()=>{
-        dispatch(getDetail(props.match.params.idPokemon))
+        dispatch(getDetail(props.match.params.id))
     },[dispatch])
     const myPokemon=useSelector((state) =>state.detail)
 
@@ -21,7 +21,7 @@ export default function Detail(props){
                     <h2>Id: {myPokemon[0].id}</h2>
                     <h1>Name: {myPokemon[0].name}</h1>
                     <img src={ myPokemon[0].img} />
-                    <h3>type:{!myPokemon[0].createdInDb? myPokemon[0].type + ' ':myPokemon[0].types.map(element => element.name + (' '))}</h3>
+                    <h3>type:{!myPokemon[0].createdInDb? myPokemon[0].type + ' ':myPokemon[0].types.map(element => element.name + (' '))}</h3>// aca primero pregunto si el pokemon es de la api y sino es de la db
                     <p>Vida: {myPokemon[0].health}</p>
                     <p>Ataque: {myPokemon[0].attack}</p>
                     <p>Defensa: {myPokemon[0].defense}</p>

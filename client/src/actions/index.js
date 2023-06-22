@@ -16,7 +16,7 @@ export function getPokemons(){
 export function filterPokemonsByType(payload){// lo que llega aca es lo que le mando del componente
     console.log(payload);
     return {
-        type: 'FILTER_BY_TYPE',
+        type: 'FILTER_BY_TYPE',// el filter me sirve para acceder despues en el reducer
         payload
         
     }
@@ -32,7 +32,7 @@ export function orderByname(payload){
  export function getNamePokemons(name){
     return async function(dispatch){
         try{
-            let json = await axios.get("https://pokeapi.co/api/v2/pokemon/?name="+ name);
+            let json = await axios.get(`http://localhost:3001/pokemons?name=${name}`);
             return dispatch({
                 type:'GET_NAME_POKEMONS',
                 payload:json.data

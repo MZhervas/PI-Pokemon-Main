@@ -22,10 +22,10 @@ export default function PokemonCreate(){
     })
     const [errors, setErrors] = useState({});
 
-    function handleChange(event){// cada ve que ejecutes esta funcion
-        setInput({//a mi estado input, ademas de lo que tiene, agregaleel target value de lo que este modificando
+    function handleChange(event){// cada ves que ejecutes esta funcion
+        setInput({//a mi estado input, ademas de lo que tiene, agregale el target value de lo que este modificando
             ...input,
-            [event.target.name]:event.target.value
+            [event.target.name]:event.target.value.toLowerCase()// aca hago que el usuario no pueda poner mayusculas al nombre
         })
         console.log(input);
     }
@@ -61,38 +61,38 @@ export default function PokemonCreate(){
         let isValid = true;
         const errors = {};
     
-        if (input.name.trim() === "") {
+        if (input.name.trim() === "" ) {
           errors.name = "Debe ingresar un nombre.";
           isValid = false;
         }
     
-        if (input.health.trim() === "") {
-          errors.health = "Debe ingresar una vida.";
+        if (input.health.trim() === ""|| input.health.trim() <= 0) {
+          errors.health = "Debe ingresar una vida valida.";
           isValid = false;
         }
     
-        if (input.attack.trim() === "") {
-          errors.attack = "Debe ingresar un ataque.";
+        if (input.attack.trim() === "" || input.attack.trim() <= 0) {
+          errors.attack = "Debe ingresar un ataque valido.";
           isValid = false;
         }
     
-        if (input.defense.trim() === "") {
-          errors.defense = "Debe ingresar una defensa.";
+        if (input.defense.trim() === "" || input.defense.trim() <= 0) {
+          errors.defense = "Debe ingresar una defensa valida.";
           isValid = false;
         }
     
-        if (input.speed.trim() === "") {
-          errors.speed = "Debe ingresar una velocidad.";
+        if (input.speed.trim() === ""|| input.speed.trim() <= 0) {
+          errors.speed = "Debe ingresar una velocidad valida.";
           isValid = false;
         }
     
-        if (input.height.trim() === "") {
-          errors.height = "Debe ingresar una altura.";
+        if (input.height.trim() === "" || input.height.trim() <= 0) {
+          errors.height = "Debe ingresar una altura valida.";
           isValid = false;
         }
     
-        if (input.weight.trim() === "") {
-          errors.weight = "Debe ingresar un peso ";
+        if (input.weight.trim() === "" || input.weight.trim() <= 0) {
+          errors.weight = "Debe ingresar un peso valido. ";
           isValid = false;
         }
     

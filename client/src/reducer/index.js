@@ -7,7 +7,7 @@ const inicialState = {
     orderByAttack: '',
 }
 
-function rootReducer (state = inicialState, action){
+function rootReducer (state = inicialState, action){// in this function of the reducer
     switch(action.type){
         case 'GET_POKEMONS':
             return{
@@ -18,7 +18,8 @@ function rootReducer (state = inicialState, action){
 
             case 'FILTER_BY_TYPE':
                 const allPokemons = state.allPokemons
-                const typeFiltered = action.payload === 'All' ? allPokemons: allPokemons.filter(element => element.type === action.payload)
+               /*  const typesFiltered = action.payload === "allTypes" ? allPokemons : allPokemons.filter(poke => poke.type[0] === action.payload || (poke.type[1] && poke.type[1] === action.payload)) */
+                const typeFiltered = action.payload === 'All' ? allPokemons: allPokemons.filter(element => element.type === action.payload);// aca primero se fija si estoy pidiendo todos lot types y sino se fija que type pido
                 console.log("Acción 'FILTER_BY_TYPE' hecha. Tipo:", action.payload);
             return{
                 ...state,
@@ -29,6 +30,7 @@ function rootReducer (state = inicialState, action){
                 return{
                     ...state,
                 }
+                
             case 'GET_TYPE':
                 return{
                     ...state,
@@ -66,13 +68,14 @@ function rootReducer (state = inicialState, action){
                       ...state,
                       pokemons: [...state.pokemons, ...newPokemons]
                     }
-                case 'FILTER_CREATED':
 
+                case 'FILTER_CREATED':
                     const createdFilter = action.payload === 'Created' ? state.allPokemons.filter(element => element.createdInDb):state.allPokemons.filter(element =>!element.createdInDb) 
                     return{
                         ...state,
                         pokemons:action.payload ==='All' ? state.allPokemons:createdFilter
                     }
+
                     case 'GET_DETAILS':
                         console.log('Detalles del Pokémon:', action.payload);
                         return{
